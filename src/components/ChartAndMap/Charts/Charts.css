@@ -1,0 +1,27 @@
+.app_header{
+  margin-bottom: 1rem;
+}
+.app_stats {
+  display: flex;
+  justify-content: space-between;
+}
+.app_right {
+  display: flex;
+  flex-direction: column;
+}
+.app_graph {
+  flex-grow: 1;
+}
+.app_graphTitle {
+  margin-top: 20px;
+}
+.app_right .MuiCardContent-root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+@media (max-width: 990px) {
+  .app {
+    flex-direction: column;
+  }
+}
