@@ -26,7 +26,7 @@ const Form = () => {
     dispatch(addContact({ id: nanoid(), firstName, lastName: lastName, status: status }));
     setFirstName("");
     setLastName("");
-    navigate("/");
+    navigate("/ContactManagement");
   };
 
   // Define the function to handle changes to the radio button selection

@@ -25,7 +25,7 @@ const ChartsAndMaps = () => {
   const [countryInfo, setCountryInfo] = useState({});
   const [tableData, setTableData] = useState([]);
   const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
-  const [mapZoom, setMapZoom] = useState(3);
+  const [mapZoom, setMapZoom] = useState(2);
   const [mapCountries, setMapCountries] = useState([])
   const [casesType, setCasesType] = useState('cases')
 
@@ -64,8 +64,8 @@ const ChartsAndMaps = () => {
       .then(data => {
         setCountry(countryCode);
         setCountryInfo(data);
-        setMapCenter(countryCode === 'worldwide' ? [data.countryInfo.lat, data.countryInfo.long] : [34.80746, -40.4796])
-        setMapZoom(4);
+        setMapCenter(countryCode === 'worldwide' ? [34.80746, -40.4796] : [data.countryInfo.lat, data.countryInfo.long] )
+        setMapZoom(2);
       })
   }
 

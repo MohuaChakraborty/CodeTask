@@ -32,8 +32,13 @@ const EditForm = ({ contact }) => {
         },
       })
     );
-    navigate("/");
+    navigate("/ContactManagement");
   };
+
+  const handleCancel = (e)=>{
+    e.preventDefault();
+    navigate("/ContactManagement");
+  }
 
   const handleRadioChange = (event) => {
     setStatus(event.target.value);
@@ -100,6 +105,9 @@ const EditForm = ({ contact }) => {
       <div>
         <button className="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-4 text-sm font-semibold text-white outline-none">
           Update
+        </button>
+        <button className="hover:shadow-form rounded-md bg-red-500 mx-2 py-3 px-4 text-sm font-semibold text-white outline-none" onClick={handleCancel}>
+          Cancel
         </button>
       </div>
     </form>

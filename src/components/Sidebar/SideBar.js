@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import ContactList from "../Contacts/ContactList";
-import Contacts from "../Contacts";
+import Contacts from "../Contacts/addContactPage";
 import Edit from "../Contacts/Edit";
 import ChartsAndMaps from "../ChartAndMap/Charts/ChartsAndMaps";
 
@@ -17,7 +17,7 @@ function SideBar() {
                         <ul className="pt-2 pb-4 space-y-1 text-lg">
                             <li className="rounded-sm">
                                 <a
-                                    href="/"
+                                    href="/ContactManagement"
                                     className="flex items-center p-2 space-x-3 rounded-md text-blue-600 hover:text-blue-800"
                                 >
                                     <span>Contact</span>
@@ -37,7 +37,7 @@ function SideBar() {
             </div>
             <div className="container mx-auto">   
                 <Routes>
-                  <Route path="/" element={<ContactList />} />
+                  <Route path="/ContactManagement" element={<ContactList />} />
                   <Route path="/contacts" element={<Contacts />} />
                   <Route path="/edit/:id" element={<Edit />} />
                   <Route path="/ChartsAndMaps" element={<ChartsAndMaps />} />
