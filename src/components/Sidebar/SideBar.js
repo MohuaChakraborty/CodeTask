@@ -25,7 +25,7 @@ function SideBar() {
                             </li>
                             <li className="rounded-sm">
                                 <a
-                                    href="/ChartsAndMaps"
+                                    href="/charts"
                                     className="flex items-center p-2 space-x-3 rounded-md text-blue-600 hover:text-blue-800"
                                 >
                                     <span>Charts and Maps</span>
@@ -40,7 +40,7 @@ function SideBar() {
                   <Route path="/ContactManagement" element={<ContactList />} />
                   <Route path="/contacts" element={<Contacts />} />
                   <Route path="/edit/:id" element={<Edit />} />
-                  <Route path="/ChartsAndMaps" element={<ChartsAndMaps />} />
+                  <Route path="/charts" element={<ChartsAndMaps />} />
                 </Routes>
             </div>
         </div>

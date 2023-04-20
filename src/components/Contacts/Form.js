@@ -34,6 +34,11 @@ const Form = () => {
     setStatus(event.target.value);
   };
 
+  const handleCancel = (e)=>{
+    e.preventDefault();
+    navigate("/ContactManagement");
+  }
+
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -108,6 +113,11 @@ const Form = () => {
           <button className="hover:shadow-form rounded-md bg-[#6A64F1] py-3 px-4 text-sm font-semibold text-white outline-none">
             Submit
           </button>
+
+          <button className="hover:shadow-form rounded-md bg-red-500 mx-4 py-3 px-4 text-sm font-semibold text-white outline-none" onClick={handleCancel}>
+          Cancel
+        </button>
+
         </div>
       </form>
     </>
